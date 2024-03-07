@@ -1,0 +1,7 @@
+Autosar has different types of ports, majorly three different categories:
+
+1. Provider ports (P -Port) (to send)  
+2. Receiver Port (R - Port) (to received)
+3. Provider-Receiver (Port) ( to send and receive)
+
+Depending on the layers, they are further divided into different interfaces

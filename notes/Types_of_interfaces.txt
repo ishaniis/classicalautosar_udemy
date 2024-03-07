@@ -1,0 +1,9 @@
+Autosar in it's classical form has different types of interfaces, as per their respective use cases. 
+
+Majorly, it can be divided into 6 major categories
+A. Send Receiver interfaces
+B. Client Server Interface 
+C. NV Data Interface
+D. Parameter Interface
+E. Mode Switch Interface
+F. Trigger Switch Interface

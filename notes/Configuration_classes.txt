@@ -1,0 +1,26 @@
+In Autosar, there are threee different types of Configuration classes:
+
+1. Pre-Compile Time
+
+A. What it contains:
+A.1 Instrutions to compile 
+A.2 Code Generation and synthesis directions 
+
+B. Files/components to expect: 
+- *cfg.h - Stores Macros and/or any explicit #defines
+- *cfg.c - Stores constants 
+- #define results usually in most cases. 
+
+Highlights of Pre-compile Time 
+1. Critical Component as it allows what part of the source code to be included and what needs to be dropped, as it holds local control over what needs to be compiled. 
+2. Also, critical to optimize code:
+2.1 Code Performance
+2.2 Code Size
+
+Constraints:
+- All the source code module mustbe readily available or accessible inside this configuration class. 
+- Configuration is not dynamic, if you end up making changes, you got to recompile the module (Tip: As it happens in C/C++, not the python behavior)
+
+2. Link Timne
+
+3. 
