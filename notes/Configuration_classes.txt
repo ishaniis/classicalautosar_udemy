@@ -21,6 +21,21 @@ Constraints:
 - All the source code module mustbe readily available or accessible inside this configuration class. 
 - Configuration is not dynamic, if you end up making changes, you got to recompile the module (Tip: As it happens in C/C++, not the python behavior)
 
-2. Link Timne
+2. Link Time 
+2.1 Constant data -> Outside the scope of module
+2.2 Constant data can only be configured after the compilation. 
 
-3. 
+2.3 Flow: Compilation -> Configure Constants -> Linking (Configuration has to always be done after compiling and before linking(it could be dynamic or static linking))
+2.4 Once Configuration is set, there exist no run-time variables which can be set or changed during the run time. 
+
+3. Post Build time
+3.1 Loadable data outside the module 
+3.2 But it's put on a specific memory chunk, which allows data reloading (Re-flashing the ECU and )
+3.3 Single or Multiple configuration are set:
+3.3.1 Configuration for the Bench
+3.3.2 Configuration for the Vehicle 
+
+3.4 Application 
+3.4.1 Two sets of Headlight (R And Left)
+3.4.2 Two sets of Camera for the Stereo Vision
+3.4.3 4 Sets of Radars on each corner.  
