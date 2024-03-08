@@ -1,0 +1,20 @@
+Types of Autosar interfaces:
+
+1. Autosar Interface:
+1.1 Defines information exchange between software components and BSW Modules. 
+1.2 Used to define the ports of SwC and BSW modules
+1.3 For Example: Rte_Read_xx() , Rte_Write_xx()
+
+2. Standardized Interface
+2.1 Interfaces are pre-defined by Autosar standard as an API (in C Language)
+2.2 Used between BSW modules in ECU:
+2.2.1 RTE & OS
+2.2.2 RTE & BSW module
+2.3 All the C Functions which are used to interact with the BSW module will remain the same. 
+2.4 Implementations might be different but the function names will be same, even if the stack comes from Elektrobit or Vector. 
+
+3. Standardized Autosar Interface
+3.1 It is a SPECIAL Autosar interface predefined by Autosar
+3.2 Types of interfaces used by SwC to access Autosar Services
+3.3 Provided by BSW Modules of Service Layer
+3.4 Example: ECU State Manager or Diagnostic Event Manager

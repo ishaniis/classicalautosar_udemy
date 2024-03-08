@@ -1,0 +1,9 @@
+Autosar follows a specific methodology for implementation
+
+System Configuration Related Information:
+1. XML(System Configuration Input) -> 2. XML (System Configuration Description) -> 3. XML (ECU Extract of System Configuration) -> 4. Configure ECU -> 5. XML (ECU Configuration Description)
+
+Stage (1 -> 3): Undertaken by Systems Engineer (Tool used: System Config Editor)
+Stage (4 -> 5): Undertaken by ECU Engineer (Tool: ECU Config Editor)
+
+Stage 6. Generate Executable -> ECU Executable (exe)
