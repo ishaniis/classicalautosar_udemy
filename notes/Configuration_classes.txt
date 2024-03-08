@@ -39,3 +39,6 @@ Constraints:
 3.4.1 Two sets of Headlight (R And Left)
 3.4.2 Two sets of Camera for the Stereo Vision
 3.4.3 4 Sets of Radars on each corner.  
+
+3.5 Benefits:
+3.5.2 Increased Reusability of code among different components , different vehicle categories -without the need to rewrite the code all over again. 

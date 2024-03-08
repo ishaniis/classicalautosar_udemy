@@ -1,0 +1,11 @@
+In Autosar libraries, are a vital component while working/developing code. 
+
+
+These can be used by BSW or RTE 
+
+Examples of Libraries:
+1. Fixed Point Mathematical 
+2. CRC Calculation
+3. Bit Handling
+4. Interpolation of fixed-point data
+5. Floating point mathematical 

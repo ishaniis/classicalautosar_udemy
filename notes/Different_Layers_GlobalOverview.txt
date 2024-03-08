@@ -1,0 +1,35 @@
+Autosar can be broadly divided into:
+
+1. BSW (Basic Software) 
+1.1 BSW can be further divided into following:
+1.1.1 Input/Output
+1.1.2 memory
+1.1.3 Crypto
+1.1.4 Communication
+1.1.5 Off-Board Communication
+1.1.6 System
+
+2. ASW (Application Software)
+3. RTE (Run-time Enviornment): Intermediate interface letting application to utilize BSW Layer. 
+
+From Top to Bottom:
+1. Application Software
+2. RTE
+3. Basic Software
+4. Hardware
+
+
+Now, In terms of the layers within the BSW:
+
+Top to Bottom
+- Application Layer
+- RTE (RTE_Read or RTE_write)
+- Services Layer
+- ECU Abstraction Layer
+- - Offers an API to access peripherals and devices 
+- MCAL (Microcontroller Abstraction Layer)
+- - Contains Driver(Internal)
+- Hardware
+
+CDD (Complex Device Driver) layer sits in between Hardware and RTE, allowing ASW to communicate for time-sensitive tasks
+Eg. Airbag deployment and actuation for the airbag in terms of emergency. 
