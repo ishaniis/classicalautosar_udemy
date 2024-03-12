@@ -7,3 +7,80 @@ Stage (1 -> 3): Undertaken by Systems Engineer (Tool used: System Config Editor)
 Stage (4 -> 5): Undertaken by ECU Engineer (Tool: ECU Config Editor)
 
 Stage 6. Generate Executable -> ECU Executable (exe)
+
+Different Stages of the methodology:
+
+1. Stage 1(System Configuration Input) - 2(System Configuration Description): 
+In System Design stage: Architecture of the application is established. 
+
+A. Scope of this stage: 
+(a) Defining SwC and their distributions to ECU. 
+(b) Network Comm is also defined at this stage. 
+(c) Resultant: System Description (AUTOSAR -> XML file) for each and every ECU.
+(d) Mapping at this stage is mapping system elements to software elements. 
+
+B. Input: 
+(i) System Template (System Configuration Input - holds constraints, mapping system elements)
+(ii) Configure System: Collection of all available Software Component Implementation
+
+C. Output: 
+System Configuration Description
+This description consists of: 
+(a) Communication Matrix
+(b) Topology
+(c) Top-level Composition
+(d) Number of ECU's 
+(e) Communication Systems involved
+(f) Communication matrixes 
+(g) Definition of SwC with their ports, interfaces and connections
+(h) Mapping of SwC to their respective ECU's. 
+
+Stage 2(System Configuration Description) -> Stage 3: ECU (Extract ECU specific description)
+Scope: Just to extract information same as Stage -2 but specific to one ECU only. 
+Output: Output of this stage will help us configure ECU
+
+Stage 3(Extract ECU specific system configuration) -> Stage 4(ECU Configuration Description)
+Scope & Objective: 
+(a)To specifically configure the ECU in referennce, whose ECU specific description was extracted. 
+(b) BSW components pertinent to that specific ECU need to be configured. 
+(c) Establishing link between BSW configuration and ECU Configuration, is being done at this stage. 
+
+Stage 4: Generation of the module configuration
+4.1 ECU Configuration Description -> 
+4.2 BSW1 Configuration Generator -> Generate Module Configuration -> 
+4.2.1  BSW1 Generated Configured Code (.c)
+4.2.2  BSW1 Configuration Header (.h)
+4.3 BSW1 Generated Configured Code (.c)
+4.4 Compile BSW1 (Using C Compiler)
+4.5 -> BSW1 Object Code (.obj)
+4.6 Link ECU Code (Using Linker)
+4.7 Generates ECU executable (.exe)
+
+Above Steps 4.1 - 4.7 is done for each configuration module and classes. 
+
+Summary:
+Intial Inputs(High Level):
+- SwC Description
+- ECU Resource Description (HW only)
+- System Constraint Description 
+
+Intermediate Outputs:
+- Component API generator
+- AUTOSAR System Configuration Generator
+
+Output:
+- Component API generator -> Component API (.h)
+- Autosar System COnfiguration Generator -> System Configuration Description
+
+System Configuration Description contents:
+- ECU extract of System Configuration
+
+Output(on ECU side):
+- Component API -> SwC Implementation
+- System Configuration Description -> AUTOSAR ECU Configuration Generation  -> ECU Configuration Description
+
+Contents of ECU Configuration Description:
+- RTE extract of ECU Configuration -> AUTOSAR RTE generator
+- OS extract of ECU Configuration  -> OS, COM Generator
+- BSW Modules -> BSW Generator
+- List of implementation of SwC -> MCAL Generator
