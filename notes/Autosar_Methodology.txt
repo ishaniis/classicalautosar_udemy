@@ -84,3 +84,10 @@ Contents of ECU Configuration Description:
 - OS extract of ECU Configuration  -> OS, COM Generator
 - BSW Modules -> BSW Generator
 - List of implementation of SwC -> MCAL Generator
+
+
+Summary of the Workflow:
+Generator(RTE, BSW, OS) -> SwC Components (.c files) -> Compiler -> Linker(Compiles all Object Files) -> (Generates Executable .exe)
+
+.exe will contain: 
+All the generated aspects of OS, Comm, BSW etc. 
