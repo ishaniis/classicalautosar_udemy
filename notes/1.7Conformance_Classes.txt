@@ -1,0 +1,25 @@
+Three conformance Classes: 
+
+1.ICC1: 
+1.1 Lowest Implementation
+
+1.2 RTE and BSW is put into one cluster.
+
+1.3 Which all elements need to AUTOSAR Conformance:
+1.3.1 RTE
+1.3.2 ASW (Application Software)
+1.3.3 Interface to the BUS
+
+1.4 BSW is regarded as the blackbox , allowing legacy platform to be migrated to AUTOSAR, to support SwC's. 
+
+2. ICC2:
+2.1 Logically related modules
+2.2 Bundled into separate cluster as per the logic.
+2.3 For Example: All comm related modules form one cluster
+
+3. ICC3
+3.1 ICC3 is the highest conformance to the AUTOSAR architecture. 
+3.2 All BSW modules as defined by AUTOSAR(Ideally) - The ideal Implementation of the AUTOSAR
+3.3 No more clustering being done at this stage of the conformance. 
+3.4 Follows all the AUTOSAR standards and modules. 
+

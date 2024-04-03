@@ -1,0 +1,23 @@
+Turning on the HEADLIGHT:
+
+-> When the switch position is changed
+
+-> When position is changed -> through MCAL module -> 
+
+So your ASW(Application Software) layer is span over different functionalities, Inthis case:
+- Switch Event
+- Led Request
+- Led Manager
+- Headlight 
+
+So your ASW has four different functionalities within the ASW software. 
+
+Trigger chain of events:
+
+Standardized Interface(DIO)(MCAL - MicroController Abstraction Layer) -> Triggers -> ECU Abstraction (BSW Module) -> via RTE(will inform) -> ASW (Switch Event) - > via RTE -> ASW (Led Request)
+
+BSW Software is usually configured and auto generated using something like Davinci Configurator. 
+For the Davinci to work, you need to push the BSW Configurations -> It'll generate the code. 
+
+ASW is something where we got to implement the logic on our own, it depends on organization to organization and developer to developer, as to how they want to implement that piece of the logic.
+
