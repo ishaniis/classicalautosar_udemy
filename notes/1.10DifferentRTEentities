@@ -1,0 +1,15 @@
+Different RTE entities:
+
+1. Software component:
+1.1 ASW (Application SwC): 
+1.2 SensorActuator SwC:
+1.3 Parameter SwC: Handles calibration parameters, used to share calibration parameters. Don't have internal behavior
+1.4 Composition SwC: 
+1.5 Service Proxy SwC: Acts as a proxy to provide internal services to one/more remote ECU's. 
+
+2. Composition
+3. Port
+4. Port Interface
+5. Connector
+6. Internal Behavior
+7. Runnable entity

@@ -16,8 +16,15 @@ Trigger chain of events:
 
 Standardized Interface(DIO)(MCAL - MicroController Abstraction Layer) -> Triggers -> ECU Abstraction (BSW Module) -> via RTE(will inform) -> ASW (Switch Event) - > via RTE -> ASW (Led Request)
 
+Now, 
+When the trigger has reached to ASW (SwC: Led Request) -> Through RTE functions -> Led manager (ASW SwC) -> via RTE functions -> Headlight (ASW, SwC) -> via RTE function -> Set_current module (BSW) -> PWM (Standardized interface, MCAL layer) -> Headlight will be switched ON
+
 BSW Software is usually configured and auto generated using something like Davinci Configurator. 
 For the Davinci to work, you need to push the BSW Configurations -> It'll generate the code. 
+How the process looks like: 
+You fill in the details of configuration containers -> generates -> header and source code files. 
 
 ASW is something where we got to implement the logic on our own, it depends on organization to organization and developer to developer, as to how they want to implement that piece of the logic.
+ASW has different SwC's, Application functionality is distributed between different SwC. 
+
 

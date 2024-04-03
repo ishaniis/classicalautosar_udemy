@@ -1,0 +1,16 @@
+Migration Strategies:
+
+A. Start with ICC1 (Autosar Compliant elements: ASW, RTE and communication to BUS)
+
+B. Then Graudally move towards modularity -> Move towards ICC2 (Logically grouping of the modules & clustered)
+
+At the stage of ICC2, you'll start distinguish between:
+- Memory Stack
+- Communication Stack 
+- Diagnostic Stack
+
+Some functionalities which can't be fit into separate modules, we'll implement wrapper to implement the same. 
+If something doesn't fit in the module, that can be moved to the Application. 
+
+In certain cases, where we are not able to fit certain applications, we can shift that into CDD modules (Complex Device Driver)
+
