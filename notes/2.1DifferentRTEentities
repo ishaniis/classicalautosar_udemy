@@ -1,0 +1,64 @@
+Different RTE entities:
+
+1. Software component:
+1.1 ASW (Application SwC): 
+1.2 SensorActuator SwC:
+1.3 Parameter SwC: Handles calibration parameters, used to share calibration parameters. Don't have internal behavior
+1.4 Composition SwC: 
+1.5 Service Proxy SwC: Acts as a proxy to provide internal services to one/more remote ECU's. 
+1.6 Swervice SwC: Services specified BSW
+1.7 ECU Abs SwC: I/O by directly interacting with BSW modules. Other SwC cannot be used for accessing I/O.
+1.8 Complex Device Driver (CDD) SwC: Used to develop CDD for external devices, which AUTOSAR don't support or have any time critical requirements.
+1.9 NvBlock SwC: SwC is used to interact with NVRAM or memory. 
+
+2. Composition:
+2.1 Used to build heirarchial system. 
+2.2 A group of SwC to a single ECU during system configuration. 
+2.3 Grouping is logical & it helps to standardize the process
+
+3. Port
+3.1 Two types of Ports:
+3.1.1 Provider
+3.1.2 Receiver
+
+3.2 Ports are medium of communication for SwC, to communicate between external medium
+3.3 Application: Data transfer and received etc. 
+3.4 Data which will be transfered is known, as it helps to standardize the entire process. 
+3.5 Port belongs to one SwC at a given instant.
+
+4. Port Interface
+
+5. Connector
+5.1 Different types of Connectors:
+5.1.1 Assembly: When Communication happens inside a given Composition.
+5.1.2.1 Delegation: When some ports of SwC need to be exposed outside the Composition. 
+5.1.2.2 Reason for Delegation: As Autosar doesn't allows communication to happen outside composition directly, so using delegation the communication can happen in two different compositions. 
+
+
+6. Internal Behavior
+6.1 Consists of 
+6.1.1 Runnable entity
+6.1.1.1 Where Application logic is written
+6.1.1.2 Analogous to function in C programming, in which we create runable in a SwC during configuration.
+6.1.1.3 Function skeleton is generated in respective source files of SwC's.
+6.1.1.4 Name of the skeleton function is the same that we give to the runnable at the time of configuration 
+6.1.1.5 Runnables have: 
+6.1.1.5.1 Variables
+6.1.1.5.2 Trigger/Calls: Activated when a certain condition is met. These conditions are also defined during the configuration.
+All the things required (runnable entities - Functions - where we write our logic) - We write our logic inside the generated skeleton from configuration softwares.
+
+6.1.2 Three types of Runnables:
+6.1.2.1 Init : init of ECU
+6.1.2.2 Periodic: Execute operations periodically
+6.1.2.3 Server: Used to implement server of Client/Server port interface
+
+6.2 RTE events
+6.2.1 Different types of RTE events
+6.2.1.1 Timing events
+6.2.1.2 Data received events
+6.2.1.3 Operation invoked 
+6.2.1.4 Mode Switch 
+6.2.1.5 Data Received Error
+6.2.1.6 Data Send Completed 
+
+6.3 Exclusive Areas
