@@ -1,1 +1,23 @@
-RTE is responsible to link AUTOSAR SwC
+1. functionalities of RTE
+
+1.1 RTE is responsible to link AUTOSAR SwC
+1.2 SwC communicate via this link provided by RTE
+1.3 RTE acts as means by which AUTOSAR SwC access BSW modules including the OS and Communication services
+1.4 RTE implements the VFB (Virtual function Bus) for each ECU (Concept of Virtual Functions - Cpp development)
+1.5 RTE abstracts the SwC layer from Implementation of BSW and from How
+1.6 RTE enables SwC to be reused in different ECU's. 
+
+1.7 RTE allows us to use: OS & its modules, memory services and Communication services. 
+ 
+1.8 RTE is divided into two parts:
+1.8.1 Communication between SwC's
+1.8.2 Scheduling of SwC's. 
+
+1.9 RTE has interfaces using which runnables in SwC communicates with other SwC or BSW module
+1.10 RTE maps runnables to OS tasks as configured during RTE configuration. 
+1.11 RTE is responsible to execute runnables & triggering them as & when needed. 
+
+1.12 RTE is strongly linked with BSW scheduler due to some OS tasks. OS tasks can be used for:
+1.12.1 Scheduling of SwC's 
+1.12.2 Scheduling entities of BSW module. 
+
