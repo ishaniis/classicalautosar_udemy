@@ -1,0 +1,8 @@
+Shutdown Request:
+
+- Comm enable request - DISABLED
+- ECUM state: POST RUN
+- BSWmCallouts -> configured -> to inform application before and after de-initialization of BSW modules
+- NvM_WriteALL: (initiated) do-while loop
+- Depending on shutdown target the sleep or MCUperform reset API are called. 
+

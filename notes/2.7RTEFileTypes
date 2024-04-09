@@ -1,0 +1,24 @@
+RTE File types:
+
+Rte.c -> 
+1. RTE Generation Tool generates C Source File (RTE.c)
+2. Contains an instance of relevant component Data structure for each SwC on the ECU for which RTE is generated.
+3. It'll contain RTE API for each SwC.
+4. Defines tasks bodies 
+5. RTE COM Callbacks are generated, if configured at the configuration stage.
+
+Rte_Type.h ->
+1. Defines AUTOSAR data types and RTE Implementation types.
+
+RTE Application Header file->
+1. Generates application header file for each SwC configured.
+
+Rte_hook.h 
+1. Generates VFB (Virtual Function Base)
+2. Defines configured VFB Trace events
+3. Generated when VFB Trace events & VFB Trace is configured and enabled.
+
+Rte_Cbk.h
+1. Generates header file containing the prototype of COM callback functions
+2. This is only generated when RTE COM callbacks are configured. 
+

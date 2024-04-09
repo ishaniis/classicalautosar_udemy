@@ -1,0 +1,3 @@
+Intra: Communication happens within a Single ECU (Using RTE)
+Inter: Communication happens between two different ECU. (Comm between SwC is possible using RTE)
+- - RTE will invoke AUTOSAR COM to transmit/receive signals. 

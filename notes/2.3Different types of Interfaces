@@ -1,0 +1,55 @@
+Different types of Interface's:
+
+1. Sender Receiver Interface:
+- Used for commincating data between ports
+- Mode of Asynchronous data distribution
+- Sender just provides information and receiver decides automatically when and how to use the information.
+- Can be One sender to one receiver, or one sender to many receivers.
+- Supported: 1:1, M:1, 1:N, 
+- Not supported: M:N
+- Data types: Variable subtype: int, char, float, struct etc. 
+- Communication can be explicit or implicit. 
+
+Queued vs Non Queued:
+Queued: 
+- FIFO, sent data is processed using FIFO with a specified lenght
+- Prevents the loss of data by storing and ordering data received by one or multiple senders. 
+
+Non Queued:
+- Receiver will always have access to last sent data. 
+- Only works on latest available data. 
+
+Implicit vs Explicit Communication
+Implicit Communication:
+- Will not allow variables to change the data after the execution (RTE Copies value before and after execution, copies to global buffer)
+- Input is buffered.
+- Application: Where you are reading from multiple ports.
+- Used by RTE_IRead_* , RTE_IWrite_*
+
+Explicit Communication:
+- Input is not buffered. 
+- Will allow variables to change, whenever the runable is executed. 
+- Application: Unblocked access of the updated value of the Variable.
+- Used by RTE_Read_* , RTE_Write_*
+
+
+2. NV Data Interface:
+
+3. Mode Switch Interface
+
+4. Client Server Interface
+- Client server communication two modes:
+- - Synchronous (Same context)
+- - Asynchronous (Different context)
+
+- Client initiates communication, server responds as per the request from the client. 
+- A given component could be Server or client depending on the applicative use-case. 
+- Server on the same time, waits for communication from client, to dispatch an adequate response to client's request. 
+
+- Who so ever initiaties the communication can be deemed as client or server accordingly in AUTOSAR
+
+
+
+
+5. Parameter Interface
+6. Trigger Interface 

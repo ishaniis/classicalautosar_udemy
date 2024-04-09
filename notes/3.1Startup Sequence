@@ -1,0 +1,44 @@
+Startup Sequence:
+
+- Control -> Primary Bootloader -> Bootmanager -> Check for valid Application 
+(Control will only be passed to application if a valid application and no re-programming request is present)
+Else, Control(Application) -> Bootloader
+
+If in application main function
+- ECUM_initialized(){
+Cdd_intiailized()
+- BSW_intialized()
+}
+- 
+
+-> Then, OS is started (OS_Start())
+- Activates -> Autosart_task()
+
+-> Autostart_task{
+
+    schedular manager_init{
+        period_BSW_task()
+        BSW_M()
+    }
+}
+
+Workflow of Startuo Sequence:
+
+Primary Bootloader -> Bootmanager -> No Valid Application -> Bootloader
+
+Primary Bootloader -> Bootmanager -> Valid Application & No Reprogramming request -> Application main function -> ECU_M (init) -> Cdd (init) -> BSW (init) -> Start (OS) -> Schedule manager (schm_init) (init) -> BSW_m (init) -> NvM ReadALL -> Dem_init () -> WdfM Init -> RTE Start
+
+RTE Start - SwC will start
+WgDG - Watch Dog
+
+ECU_m (ECU Manager)
+- Responsible for initialization and de-intialization of ECU
+- Implements all three layers
+- - BSW manager
+- - AUTOSAR OS
+- - Schedule Manager (schM)
+- Responsible for different states:
+- - Sleep
+- - Shutdown
+- Handles all wakeup events, differentiation between real wakeup events and erratic ones. 
+

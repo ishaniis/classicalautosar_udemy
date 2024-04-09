@@ -1,0 +1,64 @@
+There are basically two stages:
+
+A.RTE Contract Stage
+B. RTE Generation Stage
+
+
+A. RTE Contract 
+- Limited information about the component is available to us. 
+- AUTOSAR interface definition are used to create:
+- - Application header of the component types
+What is application header ?
+Defines the Contract between RTE and the component. 
+
+What all things are defined in a contract?
+- Ports
+- Component types
+- Interface is defined
+- Connection between ports is defined
+
+From this contract information -> Component API (Application Header (.h) file) is generated
+
+What is means to deliver component at RTE contract stage?
+- (.xml) Component type is defined
+- (.xml) Component's behavior is defined (Internally) and described
+- Actual Source or Object Code of the component
+- Component Implementation is described
+
+B. RTE Generation Stage
+At RTE generation stage, can be further splitted into two types:
+- RTE Configuration editing
+- - When Configuration Editor has all required information from ECU Configuration description & there exists an internal structure
+- - Now, with the internal structure present, it can start to place requirements of other modules - COM & OS.
+- - Editor works incrementally until config issues are resolved. 
+
+- RTE Generation Phase
+- - After ECU has been configured, actual RTE generation can be performed
+- - After config issues, are resolved, RTE can be generated in parallel for all the modules together. 
+
+Phase workflow: 
+Collection of available SwC Implementations (.xml) -> Configure System -> System Configuration description (.xml) -> Extract ECU specific description -> ECU Extract of System COnfiguration -> Configure ECU -> ECU Configuration Description (.xml) -> Generation of RTE (.c(RTE Code) and .h(RTE Header))
+
+Summary:
+
+RTE Contract Phase:
+Inputs:
+- SwC description
+Outputs:
+- Application Header (.h)
+- Files and Application
+- Header type
+
+RTE Generation Phase:
+Inputs:
+- SwC Description
+- System Configuration Description
+- ECU Configuration Description
+Outputs:
+- Application type
+- Header File
+- Callback
+- Hook Header File
+- RTE Source File
+
+

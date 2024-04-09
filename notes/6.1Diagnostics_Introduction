@@ -1,0 +1,25 @@
+Introduction to Diagnositcs:
+System of detecting, reposting and handling of faults in the System
+
+Standardized mechanism to communicate diag information between ECU's. 
+
+
+1. DEM (Diagnositcs Event Management): Responsible to detect and report faults in a system
+2. DCM (Diagnositcs communication Management): Responsible to communicate diagnostic information in between (inter) ECU's and diagnostics tools
+- Provides services for handling diagnostic requests and responses
+- Stores and retrieves Diagnositcs information.
+- Interacts with AUTOSAR Standardized interfaces.
+
+DEM
+- Responsible for processing and storing diagnostic events and associated data
+- Provides fault information to DCM
+- Offers interfaces to Application layer & BSW modules
+- Stores into memory:
+- - faults
+- - Fault related data
+
+Diagnostic Monitors:
+- Monitors the functionality as a routine entity of component
+- Identifies specific fault type in the path which is being monitored (Often called as Monitoring path)
+
+

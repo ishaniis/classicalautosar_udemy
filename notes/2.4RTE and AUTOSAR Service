@@ -1,0 +1,4 @@
+RTE provides Standardized AUTOSAR interface for Autosar BSW and AUTOSAR SwC to communicate. 
+
+set_event_status function (client-server interface)
+When to save free-stream data (sender-receiver interface)
